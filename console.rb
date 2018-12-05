@@ -22,9 +22,12 @@ album2.save
 album3 = Album.new({ 'title' => 'The Wonder of You', 'genre' => 'Rock and Roll', 'artist_id' => artist1.id })
 album3.save
 
+artist1.name = "Nina Simone"
+artist1.update()
 
 
 
 
-binding.pry
-nil
+
+# binding.pry
+# nil
