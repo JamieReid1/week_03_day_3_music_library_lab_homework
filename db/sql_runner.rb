@@ -1,6 +1,7 @@
 
 require('pg')
 
+
 class SqlRunner
 
   def self.run(sql, values = [ ])
@@ -13,6 +14,5 @@ class SqlRunner
     end
     return result
   end
-
 
 end

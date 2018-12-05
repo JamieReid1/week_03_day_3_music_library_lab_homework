@@ -29,11 +29,12 @@ album1.title = "Unplugged"
 album1.genre = "Blues"
 album1.update()
 
+Artist.find(artist1.id)
+Album.find(album1.id)
+
 album2.delete()
+# Only works if all instances of artist's albums are removed first.
 artist2.delete()
-
-
-
 
 # binding.pry
 # nil
