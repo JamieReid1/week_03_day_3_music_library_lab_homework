@@ -13,6 +13,11 @@ class Artist
     @name = options['name']
   end
 
+  def self.delete_all()
+    sql = "DELETE FROM artists"
+    SqlRunner.run(sql)
+  end
+
   def save()
     sql = "INSERT INTO artists (
              name
@@ -22,6 +27,12 @@ class Artist
              RETURNING id"
     values = [@name]
     @id = SqlRunner.run(sql, values)[0]['id'].to_i
+  end
+
+  def self.all()
+    sql = "SELECT * FROM artists"
+    results = SqlRunner.run(sql)
+    return results.map { |artist| Artist.new(artist) }
   end
 
 
