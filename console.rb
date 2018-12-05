@@ -19,6 +19,9 @@ album1.save
 album2 = Album.new({ 'title' => 'Believe', 'genre' => 'Pop', 'artist_id' => artist2.id })
 album2.save
 
+album3 = Album.new({ 'title' => 'The Wonder of You', 'genre' => 'Rock and Roll', 'artist_id' => artist1.id })
+album3.save
+
 
 
 
