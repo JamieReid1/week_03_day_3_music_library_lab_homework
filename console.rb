@@ -29,6 +29,9 @@ album1.title = "Unplugged"
 album1.genre = "Blues"
 album1.update()
 
+album2.delete()
+artist2.delete()
+
 
 
 
