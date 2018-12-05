@@ -25,6 +25,9 @@ album3.save
 artist1.name = "Nina Simone"
 artist1.update()
 
+album1.title = "Unplugged"
+album1.genre = "Blues"
+album1.update()
 
 
 

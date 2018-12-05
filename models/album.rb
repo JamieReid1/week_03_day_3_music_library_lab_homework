@@ -30,7 +30,7 @@ class Album
               )
           RETURNING id"
     values = [@title, @genre, @artist_id]
-    @id = SqlRunner.run(sql, values)
+    @id = SqlRunner.run(sql, values)[0]['id'].to_i
   end
 
   def self.all()
@@ -43,6 +43,12 @@ class Album
     sql = "SELECT * FROM artists WHERE id = $1"
     values = [@artist_id]
     return SqlRunner.run(sql, values)[0]['name']
+  end
+
+  def update()
+    sql = "UPDATE albums SET (title, genre) = ($1, $2) WHERE id = $3"
+    values = [@title, @genre, @id]
+    SqlRunner.run(sql, values)
   end
 
 
